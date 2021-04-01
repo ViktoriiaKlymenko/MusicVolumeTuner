@@ -7,34 +7,27 @@ namespace musicvolume
     {
         static WMPLib.WindowsMediaPlayer Player = new WMPLib.WindowsMediaPlayer();
 
-        public static void VolumeUp()
+        public static void volumeUp()
         {
+            // method, that increases sound volume
             Player.settings.volume = Player.settings.volume + 5;
         }
 
-        public static void VolumeDown()
+        public static void volumeDown()
         {
+            // method, that decreases sound volume
             Player.settings.volume = Player.settings.volume - 5;
         }
 
         static void song()
         {
+            // method, that plays song and 
             Player.settings.volume = 1;
             Player.URL = "c:\\LP-Other-People_10699617.mp3";
-            while (true)
-            {
-                if (Console.ReadKey(true).Key == ConsoleKey.UpArrow)
-                {
-                    VolumeUp();
-                }
-                if (Console.ReadKey(true).Key == ConsoleKey.DownArrow)
-                {
-                    VolumeDown();
-                }
-            }
         }
         static void time()
         {
+            // method, that shows current time in the upper right corner
             while (true)
             {
                 Console.SetCursorPosition(Console.WindowWidth - Console.WindowWidth / 8, 0);
@@ -45,15 +38,19 @@ namespace musicvolume
             }
         }
 
-        static void volume()
+       static void volume()
         {
-            if (Console.ReadKey(true).Key == ConsoleKey.UpArrow)
+           // method, that cathces pressed key and detectes whether it's up or down key
+            while (true)
             {
-                VolumeUp();
-            }
-            if (Console.ReadKey(true).Key == ConsoleKey.DownArrow)
-            {
-                VolumeDown();
+                if (Console.ReadKey(true).Key == ConsoleKey.UpArrow)
+                {
+                    VolumeUp();
+                }
+                if (Console.ReadKey(true).Key == ConsoleKey.DownArrow)
+                {
+                    VolumeDown();
+                }
             }
         }
 
