@@ -24,17 +24,17 @@ namespace musicvolume
             // method, that shows current time in the upper right corner
             while (true)
             {
-                Console.SetCursorPosition(Console.WindowWidth - Console.WindowWidth / 8, 0);
+                Console.SetCursorPosition(Console.WindowWidth - Console.WindowWidth / 10, 0);
                 Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
                 Thread.Sleep(1000);
-                Console.SetCursorPosition(Console.WindowWidth - Console.WindowWidth / 8, 0);
+                Console.SetCursorPosition(Console.WindowWidth - Console.WindowWidth / 10, 0);
                 Console.WriteLine("        ");
             }
         }
         
         static void song()
         {
-            // method, that plays song and 
+            // method, that plays song
             Player.settings.volume = 1;
             Player.URL = "c:\\LP-Other-People_10699617.mp3";
         }
