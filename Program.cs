@@ -19,13 +19,7 @@ namespace musicvolume
             Player.settings.volume = Player.settings.volume - 5;
         }
 
-        static void song()
-        {
-            // method, that plays song and 
-            Player.settings.volume = 1;
-            Player.URL = "c:\\LP-Other-People_10699617.mp3";
-        }
-        static void time()
+         static void time()
         {
             // method, that shows current time in the upper right corner
             while (true)
@@ -36,6 +30,13 @@ namespace musicvolume
                 Console.SetCursorPosition(Console.WindowWidth - Console.WindowWidth / 8, 0);
                 Console.WriteLine("        ");
             }
+        }
+        
+        static void song()
+        {
+            // method, that plays song and 
+            Player.settings.volume = 1;
+            Player.URL = "c:\\LP-Other-People_10699617.mp3";
         }
 
        static void volume()
